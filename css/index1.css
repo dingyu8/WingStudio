@@ -1,0 +1,182 @@
+/* 头部区域 */
+.win-head-big {
+    display: block; 
+    width: 100%;
+    position: relative;
+    /* overflow-x: hidden; */
+}
+.win-head-all {
+    display:block; 
+    width:100%; 
+    height: 72px;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease;
+}
+.win-head {
+    display:block; 
+    width:1200px; 
+    height: 72px;  
+    margin: 0px auto; 
+    position: relative; 
+    z-index: 2;
+    /* background-color: rgb(11, 11, 11); */
+}
+/* logo区域 */
+.win-head .win-logo {
+    /* background-color: aqua; */
+    display:block; 
+    height: 22px; 
+    width: 168px; 
+    position: absolute; 
+    left: 0px; 
+    top: 25px;
+}
+.win-head .win-logo h1 {
+    display:block; 
+    height: 22px; 
+    width: 168px; 
+    background: url(https://www.tencent.com/img/index/menu_logo.png) no-repeat 0 0;
+    text-indent: -9999px; 
+    overflow: hidden;
+    background-size: 100% 100%;
+}
+/* 导航区域 */
+.win-nav { 
+    display: block; 
+    height:72px; 
+    position: absolute; 
+    right: 160px; 
+    top: 0px; 
+    cursor: pointer; 
+    opacity: 1; 
+    transition:opacity 0.3s linear;
+    transform: translate(0px,0);
+}
+.win-nav .win-nav-1 { 
+    display: inline-block; 
+    height:72px; float: left; 
+    margin-left:72px; 
+    position: relative;
+}
+.win-nav .win-nav-1 .txt { 
+    display: block; 
+    height:72px; 
+    line-height: 72px; 
+    font-size: 16px; 
+    color: #fff; 
+    font-weight: bold; 
+    opacity: 0.95; 
+    -webkit-transition:color 0.3s linear; 
+    position: relative; 
+    z-index: 2;
+}
+.win-nav .win-nav-1 .txt:hover {  
+    opacity: 1;
+}
+.win-nav .win-nav-1 .txt::after { 
+    display:block; 
+    content:""; 
+    height: 4px; 
+    width: 100%; 
+    position: absolute;
+    bottom: 19px; 
+    left: 0px; 
+    background: #194ac3; 
+    opacity: 0; 
+    -webkit-transition: transform 0.2s ease-out,opacity 0.2s ease-out; 
+    transform-origin: 50% 0%; 
+    transform:scale(0.01,1);
+}
+.win-nav .win-nav-1 .txt::before { 
+    display:none; 
+    content:""; 
+    height: 400px; 
+    width: 100%; 
+    position: absolute;
+    top: 19px; 
+    left: -10px; 
+    background: #194ac3; 
+    opacity: 1;
+}
+.win-nav .win-nav-1:hover .txt::after { 
+    transform:scale(1,1); 
+    opacity: 1;
+}
+/* .win-nav .win-nav-1 {  */
+    /* display:none; */
+/* } */
+.win-nav .win-nav-1 .menu_hook { 
+    /* display:none;  */
+    width: 100%; 
+    height: 445px; 
+    position: absolute; 
+    left: -36px; 
+    top: 0px; 
+    z-index: 1;
+}
+
+.en-us .win-nav .win-nav-1 { 
+    margin-left: 60px;
+}
+.en-us .win-nav-2 li a { 
+    padding:10px 0;
+}
+
+.win-nav-2{
+    display: none; 
+    position: absolute; 
+    width:160px; left: 50%; 
+    margin-left: -80px; 
+    text-align: center; 
+    z-index: 2; 
+}
+.win-nav-2 li a{ 
+    display: block; 
+    font-size: 16px; 
+    color: #2b2e2e; 
+    opacity: 0.7; 
+    padding: 13px 0;
+}
+.win-nav-2 li a:hover{ 
+    opacity: 1;
+}
+.win-nav-1:hover ul {
+    display: block;
+}
+/* 头部的语言区域 */
+.win-head-big .win-lan {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 25px;
+}
+.win-head-big .win-lan a {
+    display: inline-block; 
+    font-size: 16px; 
+    color: #fff; 
+    font-family:"PingFangSC-Regular"; 
+    opacity: 0.9;
+    cursor: pointer;
+}
+.win-head-big .win-lan a:hover {
+    opacity: 0.95;
+}
+.win-head-big .win-lan .win-lan-2 {
+    display: inline-block; 
+    font-size: 12px; 
+    margin: 0px 3px; 
+    position: relative; 
+    top: -2px; 
+    opacity: 0.9;
+    color: #fff;
+}
+/* banner区域 */
+.win-bar-all {
+    display: block;
+    height: 2400px;
+    /* background-color: aqua; */
+    background: url(../images/全球数字概念.avif) ;
+}
