@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾讯</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index4.css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <div class="win-head-big">
+        <div class="win-head-all">
+            <div class="win-head win-wrapper">
+                <!-- logo区域 -->
+                <a class="win-logo" href="https://www.tencent.com/zh-cn/index.html"><h1 style="margin-top: 0">Tencent腾讯</h1></a>
+                <!-- 导航区域 -->
+                <ul class="win-nav">
+                    <li class="win-nav-1">
+                      <a class="txt" href="#">简介</a>
+                      <ul class="win-nav-2">
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">愿景及使命</a></li>
+                        <li><a href="#">发展历程</a></li>
+                        <li><a href="#">业务架构</a></li>
+                        <li><a href="#">管理团队</a></li>
+                        <li><a href="#">董事会成员</a></li>
+                        <li><a href="#">企业文化</a></li>
+                        <li><a href="#">办公地点</a></li>
+                      </ul>
+                    </li>
+                    <li class="win-nav-1">
+                      <a class="txt" href="#">业务</a>
+                      <ul class="win-nav-2">
+                        <li><a href="#">面向用户</a></li>
+                        <li><a href="#">面向企业</a></li>
+                        <li><a href="#">创新科技</a></li>
+            
+                      </ul>
+                    </li>
+                    <li class="win-nav-1">
+                      <a class="txt" href="#">员工</a>
+                      <ul class="win-nav-2">
+                        <li><a href="#">人才发展</a></li>
+                        <li><a href="#">腾讯学堂</a></li>
+                        <li><a href="#">工作环境</a></li>
+                        <li><a href="#">员工活动</a></li>
+                      </ul>
+                    </li>
+                    <li class="win-nav-1">
+                      <a class="txt" href="#">ESG</a>
+                      <ul class="win-nav-2">
+                        <li><a href="#">环境</a></li>
+                        <li><a href="#">社会</a></li>
+                        <li><a href="#">治理</a></li>
+                        <li><a href="#">ESG评级</a></li>
+                        <li><a href="#">报告</a></li>
+                      </ul>
+                    </li>
+                    <li class="win-nav-1">
+                      <a class="txt" href="#">投资者</a>
+                      <ul class="win-nav-2">
+                        <li><a href="#">季度业绩及投资者新闻</a></li>
+                        <li><a href="#">公告及财务报告</a></li>
+                        <li><a href="#">业绩电话会及投资者日历</a></li>
+                        <li><a href="#">投资者工具包</a></li>
+                        <li><a href="#">证券及债券信息</a></li>
+                        <li><a href="#">环境、社会及管治</a></li>
+                        <li><a href="#">股东资讯</a></li>
+                      </ul>
+                    </li>
+                    <li class="win-nav-1">
+                      <a class="txt" href="#">媒体</a>
+                      <ul class="win-nav-2">
+                        <li><a href="#">企业动态</a></li>
+                        <li><a href="#">财务新闻</a></li>
+                        <li><a href="#">腾讯视角</a></li>
+                        <li><a href="#">媒体资料库</a></li>
+                      </ul>
+                    </li>
+                </ul>
+                <!-- 语言区域 -->
+                <div class="win-lan">
+                  <a class="win-lan-1" href="#">简</a>
+                  <i class="win-lan-2">|</i>
+                  <a class="win-lan-1" href="#">繁</a>
+                  <i class="win-lan-2">|</i>
+                  <a class="win-lan-1" href="#">EN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner区域，轮播图 -->
+    <!-- 整体框架 -->
+    <div class="overall">
+      <!-- 内容  -->
+      <div class="content">
+          <!-- 轮播图片 -->
+          <ul>
+              <li><img src="./images/banner1.avif" alt=""></li>
+              <li><img src="./images/banner2.jpg" alt=""></li>
+              <li><img src="./images/banner3.avif" alt=""></li>
+          </ul>
+          <!-- 轮播图的点 -->
+          <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ol>
+      </div>        
+    </div>
+    <script>
+      // 当页面载入的时候加载这个函数
+      window.onload = function()
+      {
+
+      // 获取大盒子的内容 为content的第一个元素 也就是ul中的内容
+      var content = this.document.getElementsByClassName("content")[0];
+
+      // 获取ul中的li
+      var li = content.getElementsByTagName("li");
+
+      // 函数传入两个参数，(i,j)
+      function fun(i, j)
+      {//转换图片函数，就是把透明度改了一下        
+          li[i].style.opacity=1;
+          li[j].style.opacity=0;
+
+          // 然后也把小图标的颜色改一下
+          // 把图标改成白色
+          // 如果图片数量发生改变 那么下面的3也要变成图片的数量
+          li[i + 3].style.backgroundColor = "#ffffff";
+
+          // 把图标改成透明
+          li[j + 3].style.backgroundColor = "#00000000";
+      }
+
+      // 默认情况下轮播图为第一张
+      fun(0, 1);//初始化下
+      var i = 0;
+      function auto()
+      {//轮播循环函数
+          i ++;
+          // 当数组越界的时候
+          if(i >= 3)
+          {
+          // 置为0
+              i = 0;
+              // 然后递归重新开始
+              // 这里的2位3-1的意思
+              fun(0, 2);
+          }
+          else
+          {
+              // 反之递归
+              fun(i, i - 1);
+          } 
+      }
+      // 设置变化的时间
+      timer = this.setInterval(auto, 2000);
+
+      // 设置鼠标在轮播图上的时候 轮播图就停止播放
+      content.onmouseover = function () 
+      { 
+          //鼠标划上去，停止轮播
+          clearInterval(timer);
+      }
+
+      // 设置鼠标在轮播图上的时候 轮播图就继续播放
+      content.onmouseout = function () 
+      { 
+          //鼠标划出，继续轮播
+          timer = setInterval(auto, 2000); //调用定时器
+      }
+      var j = 0;
+      for(; j < 3; j++)
+      {
+          //点击小图标也可以转换图片
+          li[j + 3].index = j;
+          // 当点击小图标进行的函数
+          li[j + 3].onclick = function()
+          {
+              fun(this.index, i)
+              i = this.index;
+          }
+      }
+    }
+    </script>
+</body>
+</html>

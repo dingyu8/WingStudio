@@ -1,0 +1,296 @@
+/* 头部区域 */
+.win-head-big {
+    display: block; 
+    width: 100%;
+    position: relative;
+    /* overflow-x: hidden; */
+}
+.win-head-all {
+    display:block; 
+    width:100%; 
+    height: 72px;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease;
+}
+.win-head {
+    display:block; 
+    width:1200px; 
+    height: 72px;  
+    margin: 0px auto; 
+    position: relative; 
+    z-index: 2;
+    /* background-color: rgb(11, 11, 11); */
+}
+/* logo区域 */
+.win-head .win-logo {
+    /* background-color: aqua; */
+    display:block; 
+    height: 22px; 
+    width: 168px; 
+    position: absolute; 
+    left: 0px; 
+    top: 25px;
+}
+.win-head .win-logo h1 {
+    display:block; 
+    height: 22px; 
+    width: 168px; 
+    background: url(https://www.tencent.com/img/index/menu_logo.png) no-repeat 0 0;
+    text-indent: -9999px; 
+    overflow: hidden;
+    background-size: 100% 100%;
+}
+/* 导航区域 */
+.win-nav { 
+    display: block; 
+    height:72px; 
+    position: absolute; 
+    right: 160px; 
+    top: 0px; 
+    cursor: pointer; 
+    opacity: 1; 
+    transition:opacity 0.3s linear;
+    transform: translate(0px,0);
+}
+.win-nav .win-nav-1 { 
+    display: inline-block; 
+    height:72px; float: left; 
+    margin-left:72px; 
+    position: relative;
+}
+.win-nav .win-nav-1 .txt { 
+    display: block; 
+    height:72px; 
+    line-height: 72px; 
+    font-size: 16px; 
+    color: #fff; 
+    font-weight: bold; 
+    opacity: 0.95; 
+    -webkit-transition:color 0.3s linear; 
+    position: relative; 
+    z-index: 2;
+}
+.win-nav .win-nav-1 .txt:hover {  
+    opacity: 1;
+}
+.win-nav .win-nav-1 .txt::after { 
+    display:block; 
+    content:""; 
+    height: 4px; 
+    width: 100%; 
+    position: absolute;
+    bottom: 19px; 
+    left: 0px; 
+    background: #194ac3; 
+    opacity: 0; 
+    -webkit-transition: transform 0.2s ease-out,opacity 0.2s ease-out; 
+    transform-origin: 50% 0%; 
+    transform:scale(0.01,1);
+}
+.win-nav .win-nav-1 .txt::before { 
+    display:none; 
+    content:""; 
+    height: 400px; 
+    width: 100%; 
+    position: absolute;
+    top: 19px; 
+    left: -10px; 
+    background: #194ac3; 
+    opacity: 1;
+}
+.win-nav .win-nav-1:hover .txt::after { 
+    transform:scale(1,1); 
+    opacity: 1;
+}
+/* .win-nav .win-nav-1 {  */
+    /* display:none; */
+/* } */
+.win-nav .win-nav-1 .menu_hook { 
+    /* display:none;  */
+    width: 100%; 
+    height: 445px; 
+    position: absolute; 
+    left: -36px; 
+    top: 0px; 
+    z-index: 1;
+}
+
+.en-us .win-nav .win-nav-1 { 
+    margin-left: 60px;
+}
+.en-us .win-nav-2 li a { 
+    padding:10px 0;
+}
+
+.win-nav-2{
+    display: none; 
+    position: absolute; 
+    width:160px; left: 50%; 
+    margin-left: -80px; 
+    text-align: center; 
+    z-index: 2; 
+}
+.win-nav-2 li a{ 
+    display: block; 
+    font-size: 16px; 
+    color: #2b2e2e; 
+    opacity: 0.7; 
+    padding: 13px 0;
+}
+.win-nav-2 li a:hover{ 
+    opacity: 1;
+}
+.win-nav-1:hover ul {
+    display: block;
+}
+/* 头部的语言区域 */
+.win-head-big .win-lan {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 25px;
+}
+.win-head-big .win-lan a {
+    display: inline-block; 
+    font-size: 16px; 
+    color: #fff; 
+    font-family:"PingFangSC-Regular"; 
+    opacity: 0.9;
+    cursor: pointer;
+}
+.win-head-big .win-lan a:hover {
+    opacity: 0.95;
+}
+.win-head-big .win-lan .win-lan-2 {
+    display: inline-block; 
+    font-size: 12px; 
+    margin: 0px 3px; 
+    position: relative; 
+    top: -2px; 
+    opacity: 0.9;
+    color: #fff;
+}
+/* banner区域 */
+.overall{
+    /* 设置窗口大小 */
+    width: 100%;
+    height: 900px;
+
+    /* 将弹性 <div> 元素的所有项目的居中对齐 */
+    align-items: center;
+
+    /* 设置图片外边距 左右居中 上方5% */
+    margin: 0;
+    padding: 0;    
+}
+
+.content{
+    /* 设置相对定位 */
+    position: relative;
+    height: 800px;
+    width: 100%;
+}
+
+.content ul{
+    /* 去除标签<ul><li></li></ul>默认加的样式 */
+    list-style-type: none;
+}
+
+.content ul>li{
+    width: 100%;
+    height: 900px;
+
+    /* 设置绝对定位 */
+    position: absolute;
+
+    /* 设置过度效果 时间为1s */
+    transition: 1s;
+
+    /* 设置最大透明度 默认一开始图片为透明的 当下面js加载的时候
+        第一张图片设置为不透明
+    */
+    opacity: 0;
+}
+
+/* 设置每个图片的样式 */
+.content ul>li img{    
+    /* 设置每一张图片的大小 */
+    width: 100%;
+    height: 720px;
+
+    /* 设置圆角边框 */
+    /* border-radius: 5%; */
+ 
+    /* 设置边框样式 */
+    /* border: 5px solid #0e0600;         */
+}
+
+/* 设置轮播图下面的小点 */
+.content ol{
+    /* 设置相对定位 */
+    position: relative;
+    width: 1200px;
+    border-bottom: 2px solid #fff;
+    display: block;
+    padding: 20px;
+
+    margin: 10px;
+
+    /* 设置网格布局 */
+    /* display: grid; */
+    
+    /* 设置网格布局中的列数及宽度 */
+    /* grid-template-columns: repeat(3, 75px); */
+
+    /* 设置网格布局中的行数及宽度 */
+    /* grid-template-rows: auto; */
+
+    /* 设置网格行与列之间的间隙 */
+    /* 间隙为1em */
+    /* grid-gap: 1em; */
+    /* gap:1em; */
+
+    /* 右浮动 */
+    float: right;
+
+    /* 设置浮点的向上的内边距 */
+    margin-top: 490px;
+
+    /* 去除列表样式 */
+    list-style: none;
+
+    /* 把图像的上边缘设置在其包含元素上边缘之下0px高的位置 */
+    top: 0;
+
+    /* 把图像的左边缘设置在其包含元素上边缘之下0px高的位置 */
+    left: 0;
+    margin-right: 160px;
+}
+
+.content ol li{
+    /* 设置每个小点的大小 */
+    width: 10px;
+    height: 10px;
+
+    /* 设置里面的文字的大小 */
+    font-size: 15px;
+
+    /* line-height 属性设置行间的距离（行高） */
+    line-height: 20px;
+    margin: 16px;
+
+    /* 浮动左对齐 */
+    float: right;
+
+    /* 设置文本居中 */
+    text-align: center;
+
+    /* 把表格做成圆点 */
+    border-radius: 2em;
+
+    /* 设置圆点的边框 */
+    border: 5px solid #f9f6f6;
+}
