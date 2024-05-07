@@ -57,7 +57,8 @@
 }
 .win-nav .win-nav-1 { 
     display: inline-block; 
-    height:72px; float: left; 
+    height:72px;
+    float: none; 
     margin-left:72px; 
     position: relative;
 }
@@ -69,7 +70,7 @@
     color: #fff; 
     font-weight: bold; 
     opacity: 0.95; 
-    -webkit-transition:color 0.3s linear; 
+    transition:color 0.3s linear; 
     position: relative; 
     z-index: 2;
 }
@@ -86,7 +87,7 @@
     left: 0px; 
     background: #194ac3; 
     opacity: 0; 
-    -webkit-transition: transform 0.2s ease-out,opacity 0.2s ease-out; 
+    transition: transform 0.2s ease-out,opacity 0.2s ease-out; 
     transform-origin: 50% 0%; 
     transform:scale(0.01,1);
 }
