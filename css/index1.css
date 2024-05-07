@@ -174,7 +174,7 @@
     color: #fff;
 }
 /* banner区域 */
-.overall{
+.overall {
     /* 设置窗口大小 */
     width: 100%;
     height: 900px;
@@ -187,19 +187,19 @@
     padding: 0;    
 }
 
-.content{
+.content {
     /* 设置相对定位 */
     position: relative;
     height: 800px;
     width: 100%;
 }
 
-.content ul{
+.content ul {
     /* 去除标签<ul><li></li></ul>默认加的样式 */
     list-style-type: none;
 }
 
-.content ul>li{
+.content ul>li {
     width: 100%;
     height: 900px;
 
@@ -216,7 +216,7 @@
 }
 
 /* 设置每个图片的样式 */
-.content ul>li img{    
+.content ul>li img {    
     /* 设置每一张图片的大小 */
     width: 100%;
     height: 720px;
@@ -229,7 +229,7 @@
 }
 
 /* 设置轮播图下面的小点 */
-.content ol{
+.content ol {
     /* 设置相对定位 */
     position: relative;
     width: 1200px;
@@ -269,7 +269,7 @@
     margin-right: 160px;
 }
 
-.content ol li{
+.content ol li {
     /* 设置每个小点的大小 */
     width: 10px;
     height: 10px;
@@ -292,12 +292,4 @@
 
     /* 设置圆点的边框 */
     border: 5px solid #f9f7f7;
-}
-.content .nr {
-    display: block;
-    position: relative;
-    margin: 160px;
-    width: 900px;
-    height: 320px;
-    background-color: rgb(249, 253, 253);
 }
