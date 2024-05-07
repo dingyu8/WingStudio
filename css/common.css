@@ -1,0 +1,9 @@
+a, a:hover, a:active {
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 1240px;
+}
