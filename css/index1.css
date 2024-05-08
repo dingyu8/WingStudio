@@ -1,16 +1,19 @@
 /* 头部区域 */
 .win-head-big {
     display: block; 
+    /* font-size: 40px; */
     width: 100%;
-    position: relative;
-    /* overflow-x: hidden; */
+    position: fixed;
+    /* position: sticky; */
+    top: 0px;
+    z-index: 9;
 }
 .win-head-all {
     display:block; 
     width:100%; 
     height: 72px;
-    z-index: 2;
-    position: absolute;
+    z-index: 10;
+    /* position: absolute; */
     left: 0;
     top: 0;
     transition: all 0.4s ease;
@@ -21,7 +24,7 @@
     height: 72px;  
     margin: 0px auto; 
     position: relative;
-    z-index: 2;
+    z-index: 11;
     /* background-color: rgb(11, 11, 11); */
 }
 /* logo区域 */
@@ -33,6 +36,7 @@
     position: absolute; 
     left: 0px; 
     top: 25px;
+    z-index: 12;
 }
 .win-head .win-logo h1 {
     display:block; 
@@ -42,6 +46,7 @@
     text-indent: -9999px; 
     overflow: hidden;
     background-size: 100% 100%;
+    z-index: 13;
 }
 /* 导航区域 */
 .win-nav { 
@@ -54,6 +59,7 @@
     opacity: 1; 
     transition:opacity 0.3s linear;
     transform: translate(0px,0);
+    z-index: 60;
 }
 .win-nav .win-nav-1 { 
     display: inline-block; 
@@ -61,6 +67,7 @@
     float: none; 
     margin-left:72px; 
     position: relative;
+    z-index: 60;
 }
 .win-nav .win-nav-1 .txt { 
     display: block; 
@@ -72,7 +79,7 @@
     opacity: 0.95; 
     transition:color 0.3s linear; 
     position: relative; 
-    z-index: 2;
+    z-index: 80;
 }
 .win-nav .win-nav-1 .txt:hover {  
     opacity: 1;
@@ -112,11 +119,11 @@
 .win-nav .win-nav-1 .menu_hook { 
     /* display:none;  */
     width: 100%; 
-    height: 445px; 
+    height: 1200px; 
     position: absolute; 
     left: -36px; 
     top: 0px; 
-    z-index: 1;
+    z-index: 17;
 }
 
 .en-us .win-nav .win-nav-1 { 
@@ -132,7 +139,7 @@
     width:160px; left: 50%; 
     margin-left: -80px; 
     text-align: center; 
-    z-index: 2; 
+    z-index: 18; 
 }
 .win-nav-2 li a{ 
     display: block; 
@@ -178,7 +185,7 @@
 .overall {
     /* 设置窗口大小 */
     width: 100%;
-    height: 900px;
+    height: 665px;
 
     /* 将弹性 <div> 元素的所有项目的居中对齐 */
     align-items: center;
@@ -293,4 +300,446 @@
 
     /* 设置圆点的边框 */
     border: 5px solid #f9f7f7;
+}
+/* 轮播图文字 */
+.win-banner-text {
+    display: block;
+    visibility: visible;
+    transform: translateX(0);
+    animation: none;
+    width: 600px;
+    height: 400px;
+    background-color: pink;
+}
+.win-banner-text h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+.win-banner-text h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+}
+/* 最新动态 */
+/* 最新动态四个字 */
+.zxdt {
+    display: block;
+    width: 300px;
+    height: 34px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #fdfdfd;
+    /* background-color: chartreuse; */
+    z-index: 20;
+    transition: all 1s;
+    position: relative;
+    top: -45px;
+    left: 162px;
+}
+/* 整个大的板块 */
+.news {
+    width: 1200px;
+    height: 625px;
+    /* background-color: pink; */
+    display: flex;
+    position: relative;
+    top: -24px;
+    margin: 0 auto;
+    justify-content: space-between;
+    z-index: 30;
+}
+/* 左边的新闻 */
+.news .news-1 {
+    width: 800px;
+    height: 625px;
+    background-color: #fdf8f8;
+    /* border: #fff solid 2px; */
+    overflow: hidden;
+}
+/* 左边新闻的图片 */
+.news-1-img {
+    overflow: hidden;
+}
+/* 左边新闻的文字 */
+.news-1-text-time {
+    width: 100px;
+    height: 30px;
+    color: #194ac3;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    /* background-color: #2b2e2e; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: #194ac3 solid 1px;
+    border-right: #194ac3 solid 1px;
+    border-bottom: #194ac3 solid 1px;
+}
+.news-1-text-content h3 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #2b2e2e;
+    margin: 10px;
+}
+.news-1-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #2b2e2e;
+    margin: 10px;
+}
+/* 左边新闻的效果 */
+.news-1:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.news-1-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.news-1-text-content h3:hover {
+    color: #194ac3;
+}
+/* 右边的新闻 */
+.news .news-2 {
+    width: 360px;
+    height: 625px;
+    /* background-color: aquamarine; */
+    overflow: hidden;
+}
+/* 右边新闻的图片 */
+
+/* 右边新闻的文字 */
+.news-2-text {
+    display: block;
+    width: 360px;
+    height: 355px;
+    background-color: #05c9f5;
+    margin: 0 auto;
+}
+.news-2-text-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 10px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #fbfcfd solid 1px;
+    border-right: #fcfdff solid 1px;
+    border-bottom: #fdfeff solid 1px;
+}
+.news-2-text-content h3 {
+    font-weight: 400;
+    font-size: 22px;
+    color: #fcfdfd;
+    margin: 14px;
+}
+.news-2-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fafbfb;
+    margin: 14px;
+}
+/* 右边新闻的效果 */
+.news-2:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.news-2-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 三个新闻 */
+.win-3news {
+    width: 1200px;
+    height: 560px;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+}
+/* 第一个新闻 */
+.win-3news-1 {
+    width: 350px;
+    height: 560px;
+    background-color: #05c9f5;
+    overflow: hidden;
+}
+.win-3news-1-text {
+    display: block;
+    width: 360px;
+    height: 355px;
+    background-color: #2929bf;
+    margin: 0 auto;
+}
+.win-3news-1-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 10px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #fbfcfd solid 1px;
+    border-right: #fcfdff solid 1px;
+    border-bottom: #fdfeff solid 1px;
+}
+.win-3news-1-text-content h3 {
+    font-weight: 400;
+    font-size: 22px;
+    color: #fcfdfd;
+    margin: 14px;
+}
+.win-3news-1-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fafbfb;
+    margin: 14px;
+}
+/* 第一个新闻的效果 */
+.win-3news-1:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-3news-1-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 第二个新闻 */
+.win-3news-2 {
+    width: 350px;
+    height: 560px;
+    background-color: #2b2e2e;
+    overflow: hidden;
+}
+.win-3news-2-text {
+    display: block;
+    width: 360px;
+    height: 275px;
+    background-color: #e7e7e7;
+    margin: 0 auto;
+}
+.win-3news-2-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #194ac3;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 10px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #194ac3 solid 2px;
+    border-right: #194ac3 solid 2px;
+    border-bottom: #194ac3 solid 2px;
+}
+.win-3news-2-text-content h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #040404;
+    margin: 14px;
+}
+.win-3news-2-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #050505;
+    margin: 14px;
+}
+/* 第二个新闻的效果 */
+.win-3news-2:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-3news-2-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 第三个新闻 */
+.win-3news-3 {
+    width: 350px;
+    height: 560px;
+    background-color: #7107f3;
+    overflow: hidden;
+}
+.win-3news-3-text {
+    display: block;
+    width: 360px;
+    height: 275px;
+    background-color: #bab2b2;
+    margin: 0 auto;
+}
+.win-3news-3-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #194ac3;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 10px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #194ac3 solid 2px;
+    border-right: #194ac3 solid 2px;
+    border-bottom: #194ac3 solid 2px;
+}
+.win-3news-3-text-content h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #040404;
+    margin: 14px;
+}
+.win-3news-3-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #050505;
+    margin: 14px;
+}
+/* 第三个新闻的效果 */
+.win-3news-3:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-3news-3-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 两个新闻 */
+.win-2news {
+    display: flex;
+    width: 1200px;
+    height: 600px;
+    /* background-color: pink; */
+    margin: 15px auto;
+    justify-content: space-between;
+    position: relative;
+}
+/* 新闻一 */
+.win-2news-1 {
+    width: 775px;
+    height: 600px;
+    background-color: #f5f2f2;
+    overflow: hidden;
+}
+.win-2news-1-text {
+    display: block;
+    width: 360px;
+    height: 200px;
+    background-color: #faf9f9;
+    margin: 0 auto;
+}
+.win-2news-1-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #194ac3;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #194ac3 solid 2px;
+    border-right: #194ac3 solid 2px;
+    border-bottom: #194ac3 solid 2px;
+}
+.win-2news-1-text-content h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #040404;
+    margin: 14px;
+}
+.win-2news-1-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #050505;
+    margin: 14px;
+}
+/* 新闻一的效果 */
+.win-2news-1:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-2news-1-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+/* 新闻二 */
+.win-2news-2 {
+    width: 350px;
+    height: 600px;
+    /* background-color: blue; */
+    overflow: hidden;
+}
+.win-2news-2-text {
+    display: block;
+    width: 360px;
+    height: 340px;
+    background-color: #2a5ef8;
+    margin: 0 auto;
+}
+.win-2news-2-time {
+    display: block;
+    width: 140px;
+    height: 30px;
+    color: #fbfbfc;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 16px;
+    /* margin-top: 0px; */
+    margin-bottom: 18px;
+    /* background-color: #2b2e2e; */
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    border-top: #fefeff solid 2px;
+    border-right: #fdfeff solid 2px;
+    border-bottom: #fdfeff solid 2px;
+}
+.win-2news-2-text-content h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fbfafa;
+    margin: 14px;
+}
+.win-2news-2-text-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fbfbfb;
+    margin: 14px;
+}
+/* 新闻一的效果 */
+.win-2news-2:hover {
+    transform: translateY(-12px);
+    transition: all 0.3s;
+}
+.win-2news-2-img:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
 }
