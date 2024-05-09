@@ -772,27 +772,35 @@
     align-content: center;
     align-items: center;
     z-index: 90;
+    overflow: hidden;
 }
-.win-about-1 img {
-    position: absolute;
+.win-about-1-img {
+    position: relative;
+    margin-top: 0px;
+    overflow: hidden;
 }
-
-.win-about-1 span {
-    display: block;
-    color: #fff;
+.win-about-1 a h2 {
+    width: 370px;
+    height: 220px;
     font-size: 35px;
     font-weight: 400;
-    width: 200px;
-    height: 160px;
+    color: #fff;
     /* background-color: #05c9f5; */
-    position: relative;
-    line-height: 160px;
+    position: absolute;
+    align-content: center;
+    margin-top: -225px;
+    margin-left: 0px;
     text-align: center;
-    margin: 25px auto;
 }
 /* 介绍一的效果 */
-
-
+.win-about-1:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.win-about-1:hover h2 {
+    background-color: #225ff9;
+    opacity: 0.8;
+}
 /* 介绍二 */
 .win-about-2 {
     width: 370px;
@@ -803,23 +811,34 @@
     align-items: center;
     align-content: center;
     z-index: 90;
+    overflow: hidden;
 }
-.win-about-2 img {
-    position: absolute;
+.win-about-2-img {
+    position: relative;
+    margin-top: 0px;
+    overflow: hidden;
 }
-
-.win-about-2 span {
-    display: block;
-    color: #fff;
+.win-about-2 a h2 {
+    width: 370px;
+    height: 220px;
     font-size: 35px;
     font-weight: 400;
-    width: 200px;
-    height: 160px;
+    color: #fff;
     /* background-color: #05c9f5; */
-    position: relative;
-    line-height: 160px;
+    position: absolute;
+    align-content: center;
+    margin-top: -225px;
+    margin-left: 0px;
     text-align: center;
-    margin: 25px auto;
+}
+/* 介绍二的效果 */
+.win-about-2:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.win-about-2:hover h2 {
+    background-color: #225ff9;
+    opacity: 0.8;
 }
 /* 介绍三 */
 .win-about-3 {
@@ -831,21 +850,38 @@
     align-items: center;
     align-content: center;
     z-index: 90;
+    overflow: hidden;
 }
-.win-about-3 img {
-    position: absolute;
+.win-about-3-img {
+    position: relative;
+    margin-top: 0px;
+    overflow: hidden;
 }
-
-.win-about-3 span {
-    display: block;
-    color: #fff;
+.win-about-3 a h2 {
+    width: 370px;
+    height: 220px;
     font-size: 35px;
     font-weight: 400;
-    width: 200px;
-    height: 160px;
+    color: #fff;
     /* background-color: #05c9f5; */
-    position: relative;
-    line-height: 160px;
+    position: absolute;
+    align-content: center;
+    margin-top: -225px;
+    margin-left: 0px;
     text-align: center;
-    margin: 25px auto;
+}
+/* 介绍三的效果 */
+.win-about-3:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.win-about-3:hover h2 {
+    background-color: #225ff9;
+    opacity: 0.8;
+}
+/* 点击图 */
+.win-connect {
+    width: 100%;
+    height: 550px;
+    background-color: #1d2222;
 }
