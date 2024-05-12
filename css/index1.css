@@ -17,6 +17,7 @@
     left: 0;
     top: 0;
     transition: all 0.4s ease;
+    /* overflow: hidden; */
 }
 .win-head {
     display:block; 
@@ -181,8 +182,33 @@
     opacity: 0.9;
     color: #fff;
 }
+
+/* 遮挡 */
+.win-cart {
+    display: block;
+    width: 100%;
+    height: 640px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: -700px;
+    z-index: 50;
+}
+.win-head:hover .win-cart {
+    transform: translateY(600px);
+    transition: all 0.6s;
+}
+.win-head:hover .win-nav a {
+    color: #050505;
+}
+.win-head:hover .win-lan a {
+    color: #050505;
+}
+
+
+
+
 /* banner区域 */
-.overall {
+.win-overall {
     /* 设置窗口大小 */
     width: 100%;
     height: 665px;
@@ -194,22 +220,21 @@
     margin: 0;
     padding: 0;    
 }
-
-.content {
+.content1 {
     /* 设置相对定位 */
     position: relative;
-    height: 800px;
+    height: 700px;
     width: 100%;
 }
 
-.content ul {
+.content1 ul {
     /* 去除标签<ul><li></li></ul>默认加的样式 */
     list-style-type: none;
 }
 
-.content ul>li {
+.content1 ul>li {
     width: 100%;
-    height: 900px;
+    height: 700px;
 
     /* 设置绝对定位 */
     position: absolute;
@@ -218,37 +243,37 @@
     transition: 1s;
 
     /* 设置最大透明度 默认一开始图片为透明的 当下面js加载的时候
-        第一张图片设置为不透明
+                第一张图片设置为不透明
     */
     opacity: 0;
 }
 
 /* 设置每个图片的样式 */
-.content ul>li img {    
+.content1 ul>li img {    
     /* 设置每一张图片的大小 */
     width: 100%;
-    height: 720px;
+    height: 700px;
 
     /* 设置圆角边框 */
     /* border-radius: 5%; */
- 
+        
     /* 设置边框样式 */
     /* border: 5px solid #0e0600;         */
 }
 
 /* 设置轮播图下面的小点 */
-.content ol {
+.content1 ol {
     /* 设置相对定位 */
     position: relative;
-    width: 1200px;
-    border-bottom: 2px solid #feffff;
+    width: 100%;
+    /* border-bottom: 2px solid #feffff; */
 
     /* 设置网格布局 */
     /* display: grid; */
     display: block;
     padding: 20px;
     margin: 10px;
-    
+            
     /* 设置网格布局中的列数及宽度 */
     /* grid-template-columns: repeat(3, 20px); */
 
@@ -264,7 +289,7 @@
     float: right;
 
     /* 设置浮点的向上的内边距 */
-    margin-top: 490px;
+    margin-top: 560px;
 
     /* 去除列表样式 */
     list-style: none;
@@ -274,11 +299,11 @@
 
     /* 把图像的左边缘设置在其包含元素上边缘之下0px高的位置 */
     left: 0;
-    margin-right: 160px;
+    margin-right: 140px;
 }
 
-.content ol li {
-    /* 设置每个小点的大小 */
+.content1 ol li { 
+/* 设置每个小点的大小 */
     width: 10px;
     height: 10px;
 
@@ -299,32 +324,36 @@
     /* border-radius: 2em; */
 
     /* 设置圆点的边框 */
-    border: 5px solid #f9f7f7;
+    border: 2px solid #f9f7f7;
 }
+
+
+
 /* 轮播图文字 */
 .win-banner-text {
     display: block;
-    visibility: visible;
-    transform: translateX(0);
-    animation: none;
-    width: 600px;
-    height: 400px;
-    background-color: pink;
+    width: 1000px;
+    height: 150px;
+    /* background-color: pink; */
+    position: absolute;
+    /* line-height: 150px; */
+    margin-top: 240px;
+    margin-left: 160px;
 }
-.win-banner-text h2 {
+.win-banner-text-a h2 {
     color: #fff;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 400;
 
 }
-.win-banner-text h4 {
+.win-banner-text-a h4 {
     color: #fff;
-    font-size: 15px;
+    font-size: 22px;
     font-weight: 400;
 }
 /* 最新动态 */
 /* 最新动态四个字 */
-.zxdt {
+.win-zxdt {
     display: block;
     width: 300px;
     height: 34px;
@@ -336,11 +365,11 @@
     z-index: 20;
     transition: all 1s;
     position: relative;
-    top: -45px;
+    top: -75px;
     left: 162px;
 }
 /* 整个大的板块 */
-.news {
+.win-news {
     width: 1200px;
     height: 625px;
     /* background-color: pink; */
@@ -352,7 +381,7 @@
     z-index: 30;
 }
 /* 左边的新闻 */
-.news .news-1 {
+.win-news .win-news-1 {
     width: 800px;
     height: 625px;
     background-color: #fdf8f8;
@@ -360,11 +389,11 @@
     overflow: hidden;
 }
 /* 左边新闻的图片 */
-.news-1-img {
+.win-news-1-img {
     overflow: hidden;
 }
 /* 左边新闻的文字 */
-.news-1-text-time {
+.win-news-1-text-time {
     width: 100px;
     height: 30px;
     color: #194ac3;
@@ -378,32 +407,32 @@
     border-right: #194ac3 solid 1px;
     border-bottom: #194ac3 solid 1px;
 }
-.news-1-text-content h3 {
+.win-news-1-text-content h3 {
     font-weight: 400;
     font-size: 24px;
     color: #2b2e2e;
     margin: 10px;
 }
-.news-1-text-content p {
+.win-news-1-text-content p {
     font-weight: 400;
     font-size: 18px;
     color: #2b2e2e;
     margin: 10px;
 }
 /* 左边新闻的效果 */
-.news-1:hover {
+.win-news-1:hover {
     transform: translateY(-12px);
     transition: all 0.3s;
 }
-.news-1-img:hover {
+.win-news-1-img:hover {
     transform: scale(1.1);
     transition: all 0.4s;
 }
-.news-1-text-content h3:hover {
+.win-news-1-text-content h3:hover {
     color: #194ac3;
 }
 /* 右边的新闻 */
-.news .news-2 {
+.win-news .win-news-2 {
     width: 360px;
     height: 625px;
     /* background-color: aquamarine; */
@@ -412,14 +441,14 @@
 /* 右边新闻的图片 */
 
 /* 右边新闻的文字 */
-.news-2-text {
+.win-news-2-text {
     display: block;
     width: 360px;
     height: 355px;
     background-color: #05c9f5;
     margin: 0 auto;
 }
-.news-2-text-time {
+.win-news-2-text-time {
     display: block;
     width: 140px;
     height: 30px;
@@ -437,24 +466,24 @@
     border-right: #fcfdff solid 1px;
     border-bottom: #fdfeff solid 1px;
 }
-.news-2-text-content h3 {
+.win-news-2-text-content h3 {
     font-weight: 400;
     font-size: 22px;
     color: #fcfdfd;
     margin: 14px;
 }
-.news-2-text-content p {
+.win-news-2-text-content p {
     font-weight: 400;
     font-size: 18px;
     color: #fafbfb;
     margin: 14px;
 }
 /* 右边新闻的效果 */
-.news-2:hover {
+.win-news-2:hover {
     transform: translateY(-12px);
     transition: all 0.3s;
 }
-.news-2-img:hover {
+.win-news-2-img:hover {
     transform: scale(1.1);
     transition: all 0.4s;
 }
@@ -1199,16 +1228,220 @@
 /* 轮播图一 */
 .win-more1 {
     width: 100%;
-    height: 660px;
+    height: 760px;
     background-color: #fff;
 }
 .win-more1-img-box {
-    width: 500px;
-    height: 500px;
-    background-color: #05c9f5;
+    width: 660px;
+    height: 580px;
+    /* background-color: #05c9f5; */
+    /* position: absolute; */
 }
 .win-more1-img {
-    width: 1000px;
-    height: 600px;
-    background: url(https://www.tencent.com/data/index/index_resp_bg2.jpg) no-repeat 0 0;
+    margin-top: 100px;
+    margin-left: 120px;
+    /* clip-path: polygon(0% 0%,0% 100%,80% 100%,0% 100%); */
+    /* position: relative; */
+    clip-path: polygon(0% 0%, 100% 0, 92% 100%, 0 100%);
+    z-index: 60;
+    position: relative;
+}
+.win-more1-img-text {
+    display: block;
+    width: 520px;
+    height: 300px;
+    margin-top: -125px;
+    margin-left: 160px;
+    z-index: 100;
+    position: absolute;
+    /* background-color: #fc0505; */
+    /* color: #fff; */
+    /* text-align: center; */
+}
+.win-more1-img-text h2 {
+    font-size: 24px;
+    /* font-weight: 400; */
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.win-more1-img-text p {
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    color: #fff;
+}
+/* 轮播图一的文字 */
+.win-more1-text {
+    width: 340px;
+    height: 160px;
+    /* background-color: #05c9f5; */
+    margin-left: 830px;
+    margin-top: -270px;
+}
+.win-more1-text h2 {
+    font-size: 35px;
+    font-style: italic;
+    color: #040404;
+    margin-bottom: 15px;
+}
+.win-more1-text p {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    color: #040404;
+}
+/* 效果 */
+.win-more1-text h2:hover {
+    color: blue;
+}
+
+
+/* 轮播图二 */
+.win-more2-box {
+    /* 设置窗口大小 */
+    width: 100%;
+    height: 700px;
+
+    /* 将弹性 <div> 元素的所有项目的居中对齐 */
+    align-items: center;
+
+    /* 设置图片外边距 左右居中 上方5% */
+    /* margin: 0; */
+    /* padding: 0;     */
+}
+
+.win-imgBox{
+    /* border-top: 2px solid cadetblue; */
+    width: 100%;
+    height: 740px;
+    margin: 0 auto;
+
+}
+
+.win-imgBox img{
+    width: 100%;
+    height: 740px;
+    margin: 0 auto;
+    padding-top: 30px;
+
+}
+
+.img1{
+    display: block;
+}
+
+.img2{
+    display: none;
+}
+
+.img3{
+    display: none;
+}
+
+
+.win-more2-text {
+    width: 300px;
+    height: 200px;
+    /* background-color: #05c9f5; */
+    margin-top: -600px;
+    margin-left: 60px;
+    position: absolute;
+}
+.win-more2-text-content h2 {
+    font-size: 48px;
+    font-style: italic;
+    color: #040404;
+    margin-bottom: 10px;
+}
+.win-more2-text-content p {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #040404;
+}
+.win-more2-text-content h2:hover {
+    color: blue;
+}
+
+
+/* 结尾 */
+.win-last {
+    width: 100%;
+    height: 440px;
+    background-color: #fff;
+    position: absolute;
+    /* text-align: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+}
+.win-last-box {
+    width: 1200px;
+    height: 440px;
+    /* background-color: #05c9f5; */
+    margin: 0 auto;
+}
+/* 上面区域 */
+.win-last-top {
+    width: 1200px;
+    height: 100px;
+    /* background-color: #05c9f5; */
+    margin-top: 40px;
+    /* line-height: 100px; */
+    display: flex;
+}
+.win-last-top h2 {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    color: #2c3232;
+    /* margin-left: 20px; */
+    margin-right: 80px;
+    position: relative;
+    margin-top: 20px;
+}
+/* 内容区域 */
+.win-last-content {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    /* background-color: #05c9f5; */
+}
+.win-last-content-text {
+    display: flex;
+    /* margin-right: 80px; */
+}
+.win-last-content-text dt {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2c3232;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-right: 120px;
+    width: 100px;
+}
+.win-last-content-text dd {
+    font-size: 15px;
+    font-weight: 400;
+    color: #2c3232;
+    margin-bottom: 20px;
+}
+.win-last-content-img {
+    /* display: block; */
+    margin-top: 160px;
+    margin-left: 60px;
+}
+/* 底部区域 */
+.win-last-bottom-a {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #2c3232;
+    margin-top: 30px;
+}
+.win-last-bottom p {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #2c3232;
 }

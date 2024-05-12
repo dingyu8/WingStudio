@@ -88,15 +88,16 @@
                 <i class="win-lan-2">|</i>
                 <a class="win-lan-1" href="#">EN</a>
               </div>
+              <div class="win-cart"></div>
           </div>
       </div>
   </div>
     <!-- 固定导航栏 -->
     <!-- banner区域，轮播图 -->
     <!-- 整体框架 -->
-    <div class="overall">
+    <div class="win-overall">
       <!-- 内容  -->
-      <div class="content">
+      <div class="content1">
           <!-- 轮播图片 -->
           <ul>
               <li><img src="./images/banner1.avif" alt=""></li>
@@ -111,10 +112,8 @@
           </ol>
           <!-- 轮播图上的文字 -->
           <div class="win-banner-text">
-            <a href="#">
+            <a class="win-banner-text-a" href="#">
               <h2>2024年十大科技和应用趋势</h2>
-            </a>
-            <a href="#">
               <h4>腾讯研究院邀请科学家、工程师、学者和其他专家对2024年科技发展趋势作出预测。</h4>
             </a>
           </div>
@@ -126,10 +125,10 @@
       {
 
       // 获取大盒子的内容 为content的第一个元素 也就是ul中的内容
-      var content = this.document.getElementsByClassName("content")[0];
-
+      var content1 = this.document.getElementsByClassName("content1")[0];
       // 获取ul中的li
-      var li = content.getElementsByTagName("li");
+      var li = content1.getElementsByTagName("li");
+
 
       // 函数传入两个参数，(i,j)
       function fun(i, j)
@@ -171,14 +170,14 @@
       timer = this.setInterval(auto, 2000);
 
       // 设置鼠标在轮播图上的时候 轮播图就停止播放
-      content.onmouseover = function () 
+      content1.onmouseover = function () 
       { 
           //鼠标划上去，停止轮播
           clearInterval(timer);
       }
 
       // 设置鼠标在轮播图上的时候 轮播图就继续播放
-      content.onmouseout = function () 
+      content1.onmouseout = function () 
       { 
           //鼠标划出，继续轮播
           timer = setInterval(auto, 2000); //调用定时器
@@ -198,23 +197,23 @@
     }
     </script>
     <!-- 最新动态 -->
-    <div class="zxdt"><h1>最新动态</h1></div>
-    <div class="news">
-      <div class="news-1">
-        <div> <img class="news-1-img" src="http://testforht.rovn.ink/images/latest_l_1.avif" width="800px" height="400px" alt=""></div>
-        <div class="news-1-text">
-          <div class="news-1-text-time">2024.03.18</div>
-          <a class="news-1-text-content" href="#">
+    <div class="win-zxdt"><h1>最新动态</h1></div>
+    <div class="win-news">
+      <div class="win-news-1">
+        <div> <img class="win-news-1-img" src="http://testforht.rovn.ink/images/latest_l_1.avif" width="800px" height="400px" alt=""></div>
+        <div class="win-news-1-text">
+          <div class="win-news-1-text-time">2024.03.18</div>
+          <a class="win-news-1-text-content" href="#">
             <h3>#腾讯科技录：照护长者，保护鸟类，减少碳排，增强视频会议效果</h3>
             <p>在“腾讯科技录”第三期中,我们重点关注7个创新项目,涉及照护老人、保护野生动物和环境等领域。</p>
           </a>
         </div>
       </div>
-      <div class="news-2">
-        <div> <img class="news-2-img" src="http://testforht.rovn.ink/images/latest_r_1.cover" width="360px" height="270px" alt=""></div>
-        <div class="news-2-text">
-          <div class="news-2-text-time">2024.02.06</div>
-          <a class="news-2-text-content" href="#">
+      <div class="win-news-2">
+        <div> <img class="winnews-2-img" src="http://testforht.rovn.ink/images/latest_r_1.cover" width="360px" height="270px" alt=""></div>
+        <div class="win-news-2-text">
+          <div class="win-news-2-text-time">2024.02.06</div>
+          <a class="win-news-2-text-content" href="#">
             <h3>小小银龄卡守护独居老人生活</h3>
             <p>腾讯SSV银发科技实验室致力于帮助老年人过上更健康和更长寿的生活。</p>
           </a>
@@ -368,8 +367,106 @@
     </div>
     <!-- 轮播图一 -->
     <div class="win-more1">
-      <div class="wim-more1-img-box">
-        <div class="win-more1-img"></div>
+      <div class="win-more1-img-box">
+        <img class="win-more1-img" src="https://www.tencent.com/data/index/index_resp_bg3.jpg" width="660px" height="580px" alt="">
+        <a class="win-more1-img-text" href="#">
+          <h2>腾讯为村</h2>
+          <p>根据乡村使用场景定制微信公众号，形成由村、乡镇、区县、州市组成的公众号集群服务村民，打造手机上的“为村服务中心”。</p>
+        </a>
+      </div>
+      <div class="win-more1-text">
+        <a href="#">
+          <h2>连接
+            <br>
+            责任与信任
+          </h2>
+          <p>聚合微小善行，以科技让世界更美好</p>
+          <img src="./images/腾讯.png" width="100px" height="60px">
+        </a>
+      </div>
+    </div>
+
+
+    <!-- 轮播图二 -->
+    <div class="win-imgBox">
+      <img class="win-img-slide img1" src="https://www.tencent.com/data/index/index_develop_bg1.jpg" alt="1">
+      <img class="win-img-slide img2" src="https://www.tencent.com/data/index/index_develop_bg2.jpg" alt="2">
+      <img class="win-img-slide img3" src="https://www.tencent.com/data/index/index_develop_bg3.jpg" alt="3">
+    </div>
+    <script type="text/javascript">
+      var index=0;
+      //效果
+      function ChangeImg() {
+          index++;
+          var a=document.getElementsByClassName("win-img-slide");
+          if(index>=a.length) index=0;
+          for(var i=0;i<a.length;i++){
+              a[i].style.display='none';
+          }
+          a[index].style.display='block';
+      }
+      //设置定时器，每隔两秒切换一张图片
+      setInterval(ChangeImg,3000);
+    </script>
+
+
+    <!-- 轮播图二的文字 -->
+    <div class="win-more2-text">
+      <a class="win-more2-text-content" href="#">
+        <h2>连接
+          <br>
+          人才与发展
+        </h2>
+        <p>激发活力，助力成长</p>
+      </a>
+    </div>
+    <!-- 结尾 -->
+    <div class="win-last">
+      <div class="win-last-box">
+        <!-- 上面区域 -->
+        <div class="win-last-top">
+          <h2>关注我们</h2>
+          <a href="#">
+            <img src="./images/last.png" width="400px" height="80px" alt="">
+          </a>
+        </div>
+        <hr width="100%" size="2">
+        <!-- 内容区域 -->
+        <div class="win-last-content">
+          <a class="win-last-content-text" href="#">
+            <dl>
+              <dt>加入我们</dt>
+              <dd>社会招聘</dd>
+              <dd>校园招聘</dd>
+              <dd>国际招聘</dd>
+            </dl>
+            <dl>
+              <dt>联系我们</dt>
+              <dd>客户服务</dd>
+              <dd>合作洽谈</dd>
+              <dd>腾讯采购</dd>
+              <dd>诚信合规</dd>
+              <dd>媒体及投资者</dd>
+            </dl>
+            <dl>
+              <dt>法律信息</dt>
+              <dd>服务协议</dd>
+              <dd>隐私政策</dd>
+              <dd>知识产权</dd>
+            </dl>
+          </a>
+          <img src="./images/txxx.png" width="500px" height="200px" alt="">
+          <a class="win-last-content-img" href="#">
+            <img src="./images/l.png" width="140px" height="120px" alt="">
+          </a>
+        </div>
+        <!-- 底部区域 -->
+        <div class="win-last-bottom">
+          <a class="win-last-bottom-a" href="#">
+            法律声明    阳光准则    网站地图    粤网文【2017】6138-1456号   粤B2-20090059   粤B2-20090059
+          </a>
+          <p>Copyright © 1998 - 2024 Tencent. All Rights Reserved. 腾讯公司 版权所有</p>
+        </div>
       </div>
     </div>
 </body>
